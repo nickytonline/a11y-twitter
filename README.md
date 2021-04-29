@@ -25,7 +25,7 @@ The extension is available for Chrome and Chromium based browser that support th
 
 ### Chrome
 
-1. Run `npm run build:firefox`
+1. Run `npm run build:chrome`
 1. Follow the [steps to load an unpacked extension in Chrome](https://developer.chrome.com/docs/extensions/mv3/getstarted/#manifest)
 1. Load the unpacked extension by selecting the `build/chrome` directory when prompted.
 1. Navigate to Twitter and have fun!
