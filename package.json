@@ -1,0 +1,18 @@
+{
+  "name": "a11y-twitter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:firefox": "rimraf build/firefox;mkdirp build/firefox;cp -a browsers/firefox/. build/firefox/;cp -a src/. build/firefox/;zip -vr build/a11y-twitter-firefox.zip build/firefox/ -x \"*.DS_Store\"",
+    "build:chrome": "rimraf build/chrome;mkdirp build/chrome;cp -a browsers/chrome/. build/chrome/;cp -a src/. build/chrome/;zip -vr build/a11y-twitter-chrome.zip build/chrome/ -x \"*.DS_Store\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["a11y", "accessibility", "twitter"],
+  "author": "nickytonline <nick@iamdeveloper.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "mkdirp": "^1.0.4",
+    "rimraf": "^3.0.2"
+  }
+}
