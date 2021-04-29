@@ -1,6 +1,8 @@
 # a11y-twitter
 
-Small changes to how you use Twitter to promote Tweeting in an accessible manner. For now all the extension does is prompt you to add alt text before you Tweet. Simple but effective. 😎
+Small changes to how you use Twitter to promote Tweeting in an accessible manner. For now, it will only prompt once per Tweet to add alt text to an attachment before you Tweet.
+
+Simple but effective. 😎
 
 ## Installation for local development
 
