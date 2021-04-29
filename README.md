@@ -1,3 +1,21 @@
 # a11y-twitter
 
 Small changes to how you use Twitter to promote Tweeting in an accessible manner. For now all the extension does is prompt you to add alt text before you Tweet. Simple but effective. 😎
+
+## Installation for local development
+
+1. Run `yarn` to install the required dependencies.
+
+### Firefox
+
+1. Run `npm run build:firefox`
+1. Follow the [how to install an add-on locally steps](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension#installing)
+1. Load the add-on in debug mode by selecting the `build/firefox/manifest.json` file when prompted.
+1. Navigate to Twitter and have fun!
+
+### Chrome
+
+1. Run `npm run build:firefox`
+1. Follow the [steps to load an unpacked extension in Chrome](https://developer.chrome.com/docs/extensions/mv3/getstarted/#manifest)
+1. Load the unpacked extension by selecting the `build/chrome` directory when prompted.
+1. Navigate to Twitter and have fun!
