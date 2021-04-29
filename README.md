@@ -4,6 +4,10 @@ Small changes to how you use Twitter to promote Tweeting in an accessible manner
 
 Simple but effective. 😎
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/833231/116556193-366ef180-a8cb-11eb-87ca-b28d1925f0e2.png" alt="The a11y Twitter extension in action prompting a user to add alt text to their images before Tweeting." />
+</p>
+
 ## Installation for local development
 
 1. Run `yarn` to install the required dependencies.
