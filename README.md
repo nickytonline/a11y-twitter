@@ -1,12 +1,14 @@
 # a11y-twitter
 
+<p align="center">
+<a href="https://chrome.google.com/webstore/detail/a11y-twitter/hephfilhhabfjonfejfndljbjelhchha">Chrome extension</a> - <a href="https://addons.mozilla.org/en-CA/firefox/addon/a11y-twitter/">Firefox extension</a>
+</p>
+
 Small changes to how you use Twitter to promote Tweeting in an accessible manner. For now, it will only prompt once per Tweet to add alt text to an attachment before you Tweet.
 
 Simple but effective. 😎
 
 The extension is available for Chrome and Chromium based browser that support the Chrome Web Store. It's coming soon to Firefox. It works, just need to submit it to the add-on store. 😎
-
-- [Chrome extension](https://chrome.google.com/webstore/detail/a11y-twitter/hephfilhhabfjonfejfndljbjelhchha)
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/833231/116556193-366ef180-a8cb-11eb-87ca-b28d1925f0e2.png" alt="The a11y Twitter extension in action prompting a user to add alt text to their images before Tweeting." />
