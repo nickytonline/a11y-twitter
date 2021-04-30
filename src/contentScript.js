@@ -4,7 +4,7 @@ const ADD_DESCRIPTIONS_MESSAGE =
 const ADD_DESCRIPTION_LABEL = 'Add description';
 let askedOnce = false;
 
-async function a11yCheck(event) {
+function a11yCheck(event) {
   // For v1, don't badger folks every time for the current Tweet.
   // v2 can have an option for this.
   if (askedOnce) {
