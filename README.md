@@ -1,4 +1,4 @@
-# a11y-twitter
+# a11y-twitter 🐦
 
 <p align="center">
 <a href="https://chrome.google.com/webstore/detail/a11y-twitter/hephfilhhabfjonfejfndljbjelhchha">Chrome extension</a> - <a href="https://addons.mozilla.org/en-CA/firefox/addon/a11y-twitter/">Firefox extension</a>
