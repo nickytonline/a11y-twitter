@@ -4,7 +4,7 @@ const ADD_DESCRIPTIONS_MESSAGE =
 const ADD_DESCRIPTION_LABEL = 'Add description';
 let askedOnce = false;
 
-async function tweetButtonListener(event) {
+async function a11yCheck(event) {
   // For v1, don't badger folks every time for the current Tweet.
   // v2 can have an option for this.
   if (askedOnce) {
@@ -39,46 +39,31 @@ async function tweetButtonListener(event) {
   }
 }
 
-async function processTweetButtonContainer() {
-  return new Promise((resolve, reject) => {
-    function waitForPrimaryColumn() {
-      const mainElement = document.querySelector('main');
+function findTweetButton(element) {
+  let potentialTweetButton = element;
+  let stopSearch = false;
 
-      if (mainElement) {
-        resolve(mainElement);
-        return;
-      }
-
-      setTimeout(waitForPrimaryColumn, 250);
+  while (
+    !['tweetButtonInline', 'tweetButton'].includes(
+      potentialTweetButton.dataset.testid,
+    )
+  ) {
+    if (potentialTweetButton === document.body) {
+      potentialTweetButton = null;
+      break;
     }
 
-    waitForPrimaryColumn();
-  });
-}
-
-async function processTweetButtons() {
-  const targetNode = await processTweetButtonContainer();
-  const config = { attributes: false, childList: true, subtree: true };
-
-  function callback(mutationsList) {
-    for (const mutation of mutationsList) {
-      if (mutation.type === 'childList') {
-        const tweetButton = mutation.target.querySelector(
-          '[data-testid="tweetButtonInline"]',
-        );
-
-        if (tweetButton) {
-          tweetButton.addEventListener('click', tweetButtonListener);
-        }
-      }
-    }
+    potentialTweetButton = potentialTweetButton.parentElement;
   }
 
-  // Create an observer instance linked to the callback function
-  const observer = new MutationObserver(callback);
-
-  // Start observing the target node for configured mutations
-  observer.observe(targetNode, config);
+  return potentialTweetButton;
 }
 
-processTweetButtons();
+document.body.addEventListener('click', (event) => {
+  const { target } = event;
+  const tweetButton = findTweetButton(target);
+
+  if (tweetButton && tweetButton.ariaDisabled !== 'true') {
+    a11yCheck(event);
+  }
+});
