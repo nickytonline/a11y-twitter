@@ -41,7 +41,6 @@ async function a11yCheck(event) {
 
 function findTweetButton(element) {
   let potentialTweetButton = element;
-  let stopSearch = false;
 
   while (
     !['tweetButtonInline', 'tweetButton'].includes(
