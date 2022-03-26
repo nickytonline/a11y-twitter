@@ -18,6 +18,7 @@ function a11yCheck(event) {
   const attachments = document.querySelector('[data-testid="attachments"]');
 
   // Need to check for one or more descriptions.
+  attachments.querySelectorAll('[role="link"][aria-label="Add description"]');
   const mediaAltTextLinks = attachments
     ? attachments.querySelectorAll(
         `[role="link"][aria-label="${ADD_DESCRIPTION_LABEL}"], [role="link"][aria-label="${ADD_DESCRIPTIONS_LABEL}"]`,
@@ -71,7 +72,7 @@ function findTweetButton(element) {
   return potentialTweetButton;
 }
 
-document.body.addEventListener('click', (event) => {
+document.body.addEventListener('mousedown', (event) => {
   const { target } = event;
   const tweetButton = findTweetButton(target);
 
