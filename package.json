@@ -1,6 +1,6 @@
 {
   "name": "a11y-twitter",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,11 @@
     "build:edge": "rimraf build/edge;mkdirp build/edge;cp -a browsers/edge/. build/edge/;cp -a src/. build/edge/;zip -vr build/a11y-twitter-edge.zip build/edge/ -x \"*.DS_Store\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["a11y", "accessibility", "twitter"],
+  "keywords": [
+    "a11y",
+    "accessibility",
+    "twitter"
+  ],
   "author": "nickytonline <nick@iamdeveloper.com>",
   "license": "MIT",
   "devDependencies": {
