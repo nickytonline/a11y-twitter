@@ -1,7 +1,7 @@
 # a11y-twitter 🐦
 
 <p align="center">
-<a href="https://chrome.google.com/webstore/detail/a11y-twitter/hephfilhhabfjonfejfndljbjelhchha">Chrome extension</a> - <a href="https://addons.mozilla.org/en-CA/firefox/addon/a11y-twitter/">Firefox extension</a>
+<a href="https://chrome.google.com/webstore/detail/a11y-twitter/hephfilhhabfjonfejfndljbjelhchha">Chrome extension</a> - <a href="https://addons.mozilla.org/en-CA/firefox/addon/a11y-twitter/">Firefox extension</a> - <a href="https://microsoftedge.microsoft.com/addons/detail/a11y-twitter/kicgbhbbjgielehgoenkcijigakkmich">Edge extension</a>
 </p>
 
 Small changes to how you use Twitter to promote Tweeting in an accessible manner. For now, it will only prompt once per Tweet to add alt text to an attachment before you Tweet.
