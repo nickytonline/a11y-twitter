@@ -2,11 +2,11 @@
   "name": "a11y-twitter",
   "version": "1.2.1",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "build:firefox": "rimraf build/firefox;mkdirp build/firefox;cp -a browsers/firefox/. build/firefox/;cp -a src/. build/firefox/;zip -vr build/a11y-twitter-firefox.zip build/firefox/ -x \"*.DS_Store\"",
-    "build:chrome": "rimraf build/chrome;mkdirp build/chrome;cp -a browsers/chrome/. build/chrome/;cp -a src/. build/chrome/;zip -vr build/a11y-twitter-chrome.zip build/chrome/ -x \"*.DS_Store\"",
-    "build:edge": "rimraf build/edge;mkdirp build/edge;cp -a browsers/edge/. build/edge/;cp -a src/. build/edge/;zip -vr build/a11y-twitter-edge.zip build/edge/ -x \"*.DS_Store\"",
+
+    "start": "parcel watch src/manifest.json --host localhost --config @parcel/config-webextension",
+    "build": "parcel build src/manifest.json --config @parcel/config-webextension",
+    "postbuild": "zip -r -j dist/a11y-twitter.zip dist/*",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -18,6 +18,10 @@
   "license": "MIT",
   "devDependencies": {
     "mkdirp": "^1.0.4",
+    "parcel": "^2.6.2",
     "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "@parcel/config-webextension": "^2.6.2"
   }
 }
