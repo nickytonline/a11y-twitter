@@ -18,20 +18,19 @@ function a11yCheck(event) {
   const attachments = document.querySelector('[data-testid="attachments"]');
 
   // Need to check for one or more descriptions.
-  attachments.querySelectorAll('[role="link"][aria-label="Add description"]');
-  const mediaAltTextLinks = attachments
-    ? attachments.querySelectorAll(
-        `[role="link"][aria-label="${ADD_DESCRIPTION_LABEL}"], [role="link"][aria-label="${ADD_DESCRIPTIONS_LABEL}"]`,
-      )
-    : [];
+  const mediaAltTextLinks =
+    attachments?.querySelectorAll<HTMLElement>(
+      `[role="link"][aria-label="${ADD_DESCRIPTION_LABEL}"], [role="link"][aria-label="${ADD_DESCRIPTIONS_LABEL}"]`,
+    ) ?? [];
 
   const [missingAltTextLink] = [...mediaAltTextLinks].filter((link) => {
-    const linkTextElement = link.querySelector('[data-testid="altTextLabel"]');
+    const linkTextElement = link.querySelector<HTMLElement>(
+      '[data-testid="altTextLabel"]',
+    );
 
     // Need to check for one or more descriptions.
-    return (
-      linkTextElement.innerText === ADD_DESCRIPTION_LABEL ||
-      linkTextElement.innerText === ADD_DESCRIPTIONS_LABEL
+    return [ADD_DESCRIPTION_LABEL, ADD_DESCRIPTIONS_LABEL].includes(
+      linkTextElement?.innerText ?? '',
     );
   });
 
@@ -43,9 +42,7 @@ function a11yCheck(event) {
 
   askedOnce = true;
 
-  const shouldAddDescriptions = confirm(ADD_DESCRIPTIONS_MESSAGE);
-
-  if (shouldAddDescriptions) {
+  if (confirm(ADD_DESCRIPTIONS_MESSAGE)) {
     event.preventDefault();
     event.stopPropagation();
     missingAltTextLink.click();
