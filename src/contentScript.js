@@ -41,15 +41,14 @@ function a11yCheck(event) {
     return;
   }
 
+  askedOnce = true;
+
   const shouldAddDescriptions = confirm(ADD_DESCRIPTIONS_MESSAGE);
 
   if (shouldAddDescriptions) {
-    askedOnce = true;
     event.preventDefault();
     event.stopPropagation();
     missingAltTextLink.click();
-  } else {
-    askedOnce = false;
   }
 }
 
